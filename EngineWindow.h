@@ -51,6 +51,8 @@ private:
     QPushButton *m_fuelLevelFaultButtons[2];
 
     QPushButton *createToggleButton(const QString &text);
+    QLayout *buildGaugeRow(const QString &title, QLabel *valueLabel, QProgressBar *bar, const QString &minText, const QString &maxText);
+    QWidget *buildStatusBox(const QString &text, QLabel **labelOut);
     void setupUi();
     void setupDataFiles();
     void appendAlert(const QString &text, const QString &severity);
